@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Background from "./Components/Background/Background";
 import Login from "./Components/Login/Login";
 import Board from "./Components/Matching/Board";

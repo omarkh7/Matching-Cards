@@ -1,7 +1,7 @@
 .board-title {
   color: #e8e8e8;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .container-board {
   display: flex;
@@ -30,7 +30,7 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 20px;
   color: #e8e8e8;
 }
@@ -146,10 +146,16 @@
   transition: transform 0.8s;
 }
 
-.flipped .inner {
-  transform: rotateY(360deg);
+.flipped {
+  perspective: 1000px;
 }
 
+.flipped .inner {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
 .front img {
   position: relative;
   width: 100px;
@@ -171,8 +177,6 @@
 
 /* tablet */
 @media only screen and (max-width: 1439px) and (min-width: 769px) {
-
-  
 }
 
 /* Mobile */
@@ -184,6 +188,7 @@
 
   .board-title {
     font-size: 25px;
+    margin-top: 50px;
   }
   .board-container {
     width: 90%;

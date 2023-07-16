@@ -22,7 +22,7 @@ function Login() {
   };
 
   return (
-    <div className="login-wrapper">
+    <div >
       <div className="form-container">
         <div className="form-group">
           <label>Matching Cards</label>
