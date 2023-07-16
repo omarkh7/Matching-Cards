@@ -10,11 +10,14 @@ function Login() {
   const dispatch = useDispatch();
 
   const handleLogin = () => {
-    if (username.length >= 3) {
-      dispatch(setUsername(username));
+    const trimmedUsername = username.trim();
+    const characterCount = trimmedUsername.length; 
+  
+    if (characterCount >= 3) {
+      dispatch(setUsername(trimmedUsername));
       dispatch(setLoggedIn(true));
       sessionStorage.setItem("loggedIn", "true");
-      sessionStorage.setItem("username", username);
+      sessionStorage.setItem("username", trimmedUsername);
       window.location.href = "/";
     } else {
       toast.error("Username must contain at least three characters.");

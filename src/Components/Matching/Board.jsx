@@ -101,10 +101,10 @@ const Board = () => {
                 {name}
               </span>
               <div className="flex-end-group">
-                <span title="Reset" className="tooltip">
+                <span  className="tooltipReset">
                   <BiReset onClick={handleResetGame} />
                 </span>
-                <span title="Logout" className="tooltip">
+                <span  className="tooltipLogout">
                   <FiLogOut onClick={logout} />
                 </span>
               </div>

@@ -47,12 +47,27 @@
   cursor: pointer;
 }
 
-.tooltip {
+.tooltipReset, .tooltipLogout{
   position: relative;
 }
 
-.tooltip::after {
-  content: attr(title);
+.tooltipReset::after{
+  content: "Reset";
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  background-color: #2d212e;
+  color: #e8e8e8;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.tooltipLogout::after {
+  content: "Logout";
   position: absolute;
   top: -35px;
   left: 50%;
@@ -67,7 +82,9 @@
   transition: opacity 0.2s, visibility 0.2s;
 }
 
-.tooltip:hover::after {
+.tooltipReset:hover::after,
+.tooltipLogout:hover::after
+ {
   opacity: 50%;
   visibility: visible;
 }
